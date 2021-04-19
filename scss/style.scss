@@ -14,6 +14,8 @@ html {
 }
 *,*::after, *::before {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -22,23 +24,20 @@ a {
 /*Styles*/
 body {
     font-family: 'Barlow', sans-serif;
-}
-
-.info-icon {
-    height: 50px;
-    width: 50px;
-    background-image: url(/assets/logo.svg);
+    max-width: 1440px;
 }
 
 .header {
     display: flex;
-    align-content: space-between;
-
+    justify-content: space-between;
+    width: 1000px;
     &__link {
         display: block;
         width: 118px;
         height: 52px;
         color: #fff;
+        background-color: $green;
+
     }
 }
 
