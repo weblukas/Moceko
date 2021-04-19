@@ -5,14 +5,17 @@ html {
   font-size: 100%; }
 
 *, *::after, *::before {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
 
 a {
   text-decoration: none; }
 
 /*Styles*/
 body {
-  font-family: 'Barlow', sans-serif; }
+  font-family: 'Barlow', sans-serif;
+  max-width: 1440px; }
 
 .info-icon {
   height: 50px;
@@ -21,9 +24,11 @@ body {
 
 .header {
   display: flex;
-  align-content: space-between; }
+  justify-content: space-between;
+  width: 1000px; }
   .header__link {
     display: block;
     width: 118px;
     height: 52px;
-    color: #fff; }
+    color: #fff;
+    background-color: #00b87b; }
