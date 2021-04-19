@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*,*::after, *::before {
+    box-sizing: inherit;
+}
+
+.info-icon {
+    height: 50px;
+    width: 50px;
+    background-image: url(/assets/logo.svg);
+}
+
+.strong {
+    font-weight: bold;
+}
