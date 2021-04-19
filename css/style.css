@@ -1,24 +1,29 @@
 /*Variables*/
 /*Reset*/
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 100%;
-}
+  box-sizing: border-box;
+  font-size: 100%; }
 
 *, *::after, *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
 
 /*Styles*/
 body {
-  font-family: 'Barlow', sans-serif;
-}
+  font-family: 'Barlow', sans-serif; }
 
 .info-icon {
   height: 50px;
   width: 50px;
-  background-image: url(/assets/logo.svg);
-}
-/*# sourceMappingURL=style.css.map */
+  background-image: url(/assets/logo.svg); }
+
+.header {
+  display: flex;
+  align-content: space-between; }
+  .header__link {
+    display: block;
+    width: 118px;
+    height: 52px;
+    color: #fff; }
