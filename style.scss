@@ -1,3 +1,13 @@
+/*Variables*/
+$gutter: 30px;
+$grid: 65px;
+
+$primary-grey: rgb(65, 72, 98);
+$green: rgb(0, 184, 123);
+$light-grey-text:rgba(65, 72, 98, 0.749); 
+$light-grey-bg: rgb(241, 243, 246);
+
+/*Reset*/
 html {
     box-sizing: border-box;
     font-size: 100%;
@@ -6,12 +16,18 @@ html {
     box-sizing: inherit;
 }
 
+/*Styles*/
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
 .info-icon {
     height: 50px;
     width: 50px;
     background-image: url(/assets/logo.svg);
 }
 
-.strong {
-    font-weight: bold;
-}
+
+
+
+
