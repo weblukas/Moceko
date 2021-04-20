@@ -70,6 +70,7 @@ body {
 
 .business-areas {
     margin-top: 129px;
+    max-width: 346px;
 
     &__item {
         font-size: 42px;
@@ -84,6 +85,8 @@ body {
             font-weight: $medium;
             color: $light-grey-text;
             margin: 54px 0 88px;
+            display: flex;
+            justify-content: space-between;
         }
     }
 
@@ -91,6 +94,7 @@ body {
 
 .scroll-icon {
     display: inline-block;
+    margin-left: 155px;
 }
 
 /*Hero group*/
