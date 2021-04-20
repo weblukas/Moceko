@@ -137,19 +137,30 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative; }
+  .profits__img {
+    margin-top: 20px; }
   .profits__bg-box {
     width: 515px;
     height: 429px;
     background-color: #f1f3f6;
     position: absolute;
-    top: -59px;
+    top: -39px;
     right: -165px;
     z-index: -10; }
 
 .list__item {
   height: 82px;
   display: flex;
-  align-items: flex-start; }
+  justify-content: start;
+  align-items: center; }
+
+.list__icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 24px; }
+
+.list__strong {
+  font-weight: 700; }
 
 /*Legal info*/
 .legal-info {

@@ -174,7 +174,6 @@ body {
 .profits {
     margin-top: 106px;
     
-
     &__heading {
         font-size: 48px;
         font-weight: $medium;
@@ -194,23 +193,41 @@ body {
        position: relative;
     }
 
+    &__img {
+        margin-top: 20px;
+    }
+
     &__bg-box {
         width: 515px;
         height: 429px;
         background-color: $light-grey-bg;
         position: absolute;
-        top: -59px;
+        top: -39px;
         right: -165px;
         z-index: -10;
     }
 }
 
-.list__item {
+.list {
+
+    &__item{
     height: 82px;
     display: flex;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 24px;
+    }
+
+    &__strong {
+       font-weight: $bold; 
+    }
 }
-// do poprawy list items
+
 
 /*Legal info*/
 .legal-info {
