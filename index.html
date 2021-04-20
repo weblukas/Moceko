@@ -19,30 +19,32 @@
   </head>
   <body>
     <!--Header------------------>
-    <header class="header">
-        <h1 class="header__heading"><img src="/assets/logo.svg" alt="Moceko" /></h1>
-        <a class="header__link" href="#kontakt">Kontakt</a>
-    </header>
+    <div class="container">
+      <header class="header">
+          <h1 class="header__heading"><img src="/assets/logo.svg" alt="Moceko" /></h1>
+          <a class="header__link" href="#kontakt">Kontakt</a>
+      </header>
     <!--Main-------------------->
-    <main>
+    <main class="center ">
         <h2>
             <ul class="business-areas">
               <li class="business-areas__item">+ Dofinansowanie</li>
               <li class="business-areas__item">+ Wymiana pieca</li>
               <li class="business-areas__item">+ Docieplenie</li>
-              <li class="business-areas__item business-areas__item--summarizing">
-                = Moceko
-              </li>
             </ul>
-          </h2>
-          <div>
-            <span class="arrow-icon"></span>
+              <li class="business-areas__item business-areas__item--summarizing">
+               <span class="business-areas__item--color">=</span> Moceko
+              </li>
+              <img class="scroll-icon" src="assets/scroll.svg" > 
+            
+        </h2>
+        <div class="hero-group">
+          <img class="hero-img" src="/assets/hero-img.jpg" alt="solar panels image">
+          <div class="info">
+              <img class="info-icon" src="/assets/info.svg">
+              <h4 class="info__heading">Informacja</h4>
+              <p class="info__text">Tylko do końca roku można używać <br> stare piece, kotły <br> i paleniska do celów ogrzewania!</p>
           </div>
-        <img src="/assets/hero-img.jpg" alt="solar panels image">
-        <div class="info">
-            <span class="info-icon"></span>
-            <h4 class="info__heading">Informacja</h4>
-            <p class="info__text">Tylko do końca roku można używać <br> stare piece, kotły <br> i paleniska do celów ogrzewania!</p>
         </div>
     <!--Offer------------------>
         <div class="offer">
@@ -99,8 +101,8 @@
               wymiany pieca iremontu
             </p>
           </div>
-        </div>
-      </div>
+        
+      
       <!--Profits------------------>
       <div class="profits">
         <h3 class="profits__heading">
@@ -175,5 +177,6 @@
         <img src="/assets/logo.svg" alt="Moceko" />
       </div>
     </footer>
+  </div>
   </body>
 </html>
