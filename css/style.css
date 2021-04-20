@@ -152,7 +152,9 @@ body {
   height: 82px;
   display: flex;
   justify-content: start;
-  align-items: center; }
+  align-items: center;
+  color: #414862;
+  font-size: 20px; }
 
 .list__icon {
   width: 32px;
