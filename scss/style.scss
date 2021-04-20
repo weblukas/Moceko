@@ -7,10 +7,15 @@ $green: rgb(0, 184, 123);
 $light-grey-text:rgba(65, 72, 98, 0.749); 
 $light-grey-bg: rgb(241, 243, 246);
 
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
 /*Reset*/
 html {
     box-sizing: border-box;
     font-size: 100%;
+    overflow-x: hidden;
 }
 *,*::after, *::before {
     box-sizing: inherit;
@@ -68,7 +73,7 @@ body {
 
     &__item {
         font-size: 42px;
-        font-weight: 700;
+        font-weight: $bold;
         color: $primary-grey;
 
         &--color {
@@ -76,7 +81,7 @@ body {
         }
         &--summarizing {
             font-size: 32px;
-            font-weight: 500;
+            font-weight: $medium;
             color: $light-grey-text;
             margin: 54px 0 88px;
         }
@@ -112,12 +117,12 @@ body {
     &__heading {
         margin: 24px 0 12px;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: $bold;
     }
 
     &__text {
         font-size: 18px;
-        font-weight: 500; 
+        font-weight: $medium; 
     }
 }
 
@@ -127,12 +132,12 @@ body {
 
     &__heading {
       font-size: 48px;
-      font-weight: 500;
+      font-weight: $medium;
       color: $light-grey-text;
       line-height: 53px;
       
       &--strong {
-          font-weight: 700;
+          font-weight: $bold;
           color: $primary-grey;
       }
     }
@@ -168,12 +173,12 @@ body {
 
     &__heading {
         font-size: 48px;
-        font-weight: 500;
+        font-weight: $medium;
         color: $light-grey-text;
         line-height: 53px;
         
         &--strong {
-            font-weight: 700;
+            font-weight: $bold;
             color: $primary-grey;
         } 
     }
@@ -219,15 +224,96 @@ body {
     
     &__heading {
         font-size: 32px;
-        font-weight: 700; 
+        font-weight: $bold; 
 
         &::after {
             content: '-';
             display: block;
             color: $green;
-            
         } 
     }
 
-    
+    &__text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__strong {
+        color: $green;
+    }  
 }
+
+.footer {
+    margin-top: 132px;
+
+    &__heading {
+        font-size: 48px;
+        font-weight: $medium;
+        color: $light-grey-text;  
+    }
+
+    &__strong {
+        font-weight: $bold;
+        color: $primary-grey;
+    }
+
+    &__body {
+        margin-top: 88px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__logo {
+        margin-top: 167px;
+        width: 100vw;
+        height: 153px;
+        background-color: $light-grey-bg;
+        display: flex;
+        
+
+        &>img {
+            display: block;
+            align-self: center;
+        }
+    }
+}
+
+.tile {
+    width: 536px;
+    height: 110px;
+    padding: 31px 24px;
+    background-color: $light-grey-bg;
+    color: $primary-grey;
+
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &__icon {
+        grid-row: 1/-1;
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: auto 0;
+        
+    }
+
+    &__title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        
+        font-size: 20px;
+        font-weight: $medium;
+        
+    }
+
+    &__text {
+        grid-column: 2/3;
+        grid-row: 2/-1;
+        font-size: 24px;
+        font-weight: $semi-bold;
+    }
+
+}
+
