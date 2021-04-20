@@ -63,6 +63,7 @@ body {
 .scroll-icon {
   display: inline-block; }
 
+/*Hero group*/
 .hero-img {
   border-radius: 2px; }
 
@@ -86,3 +87,82 @@ body {
   .info__text {
     font-size: 18px;
     font-weight: 500; }
+
+/*Offer*/
+.offer {
+  margin-top: 186px; }
+  .offer__heading {
+    font-size: 48px;
+    font-weight: 500;
+    color: rgba(65, 72, 98, 0.749);
+    line-height: 53px; }
+    .offer__heading--strong {
+      font-weight: 700;
+      color: #414862; }
+  .offer__body {
+    margin: 94px auto;
+    display: flex;
+    justify-content: space-between; }
+
+.card {
+  width: 346px;
+  height: 236px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .card__icon {
+    margin-bottom: 24px; }
+  .card__text {
+    text-align: center; }
+
+/*Profits*/
+.profits {
+  margin-top: 106px; }
+  .profits__heading {
+    font-size: 48px;
+    font-weight: 500;
+    color: rgba(65, 72, 98, 0.749);
+    line-height: 53px; }
+    .profits__heading--strong {
+      font-weight: 700;
+      color: #414862; }
+  .profits__body {
+    margin-top: 88px;
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+  .profits__bg-box {
+    width: 515px;
+    height: 429px;
+    background-color: #f1f3f6;
+    position: absolute;
+    top: -59px;
+    right: -165px;
+    z-index: -10; }
+
+.list__item {
+  height: 82px;
+  display: flex;
+  align-items: flex-start; }
+
+/*Legal info*/
+.legal-info {
+  width: 100%;
+  height: 456px;
+  margin-top: 148px;
+  background-color: #414862;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 75px; }
+  .legal-info__heading {
+    font-size: 32px;
+    font-weight: 700; }
+    .legal-info__heading::after {
+      content: '-';
+      display: block;
+      color: #00b87b; }
