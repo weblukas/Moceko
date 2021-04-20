@@ -269,15 +269,14 @@ body {
         width: 100vw;
         height: 153px;
         background-color: $light-grey-bg;
-        display: flex;
-        
+    }
 
-        &>img {
-            display: block;
-            align-self: center;
-        }
+    &__img {
+        display: block;
+        padding-top: 50px;
     }
 }
+
 
 .tile {
     width: 536px;

@@ -190,11 +190,10 @@ body {
     margin-top: 167px;
     width: 100vw;
     height: 153px;
-    background-color: #f1f3f6;
-    display: flex; }
-    .footer__logo > img {
-      display: block;
-      align-self: center; }
+    background-color: #f1f3f6; }
+  .footer__img {
+    display: block;
+    padding-top: 50px; }
 
 .tile {
   width: 536px;
