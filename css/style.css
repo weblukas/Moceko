@@ -1,4 +1,5 @@
 /*Variables*/
+/*Fonts*/
 /*Reset*/
 html {
   box-sizing: border-box;
@@ -18,8 +19,10 @@ li {
 
 /*utility clasess*/
 .center {
-  max-width: 1110px;
-  margin: 0 auto; }
+  max-width: 1158px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px; }
 
 /*Styles*/
 body {
@@ -32,7 +35,6 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  max-width: 1110px;
   height: 91px;
   padding-top: 39px;
   margin: 0 auto; }
@@ -119,7 +121,9 @@ body {
   .card__icon {
     margin-bottom: 24px; }
   .card__text {
-    text-align: center; }
+    text-align: center;
+    font-size: 20px;
+    color: #414862; }
 
 /*Profits*/
 .profits {

@@ -7,9 +7,16 @@ $green: rgb(0, 184, 123);
 $light-grey-text:rgba(65, 72, 98, 0.749); 
 $light-grey-bg: rgb(241, 243, 246);
 
+/*Fonts*/
 $medium: 500;
 $semi-bold: 600;
 $bold: 700;
+
+$font-xs: 18px;
+$font-sm: 20px;
+$font-md: 24px;
+$font-lg: 48px;
+
 
 /*Reset*/
 html {
@@ -31,8 +38,10 @@ li {
 }
 /*utility clasess*/
 .center {
-    max-width: 1110px;
+    max-width: 1158px;
     margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 /*Styles*/
 body {
@@ -48,7 +57,6 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    max-width: 1110px;
     height: 91px;
     padding-top: 39px;
     margin: 0 auto;
@@ -120,12 +128,12 @@ body {
 
     &__heading {
         margin: 24px 0 12px;
-        font-size: 24px;
+        font-size: $font-md;
         font-weight: $bold;
     }
 
     &__text {
-        font-size: 18px;
+        font-size: $font-xs;
         font-weight: $medium; 
     }
 }
@@ -135,7 +143,7 @@ body {
     margin-top: 186px;
 
     &__heading {
-      font-size: 48px;
+      font-size: $font-lg;
       font-weight: $medium;
       color: $light-grey-text;
       line-height: 53px;
@@ -167,6 +175,8 @@ body {
 
    &__text {
        text-align: center;
+       font-size: $font-sm;
+       color: $primary-grey;
    }
 }
 
@@ -175,7 +185,7 @@ body {
     margin-top: 106px;
     
     &__heading {
-        font-size: 48px;
+        font-size: $font-lg;
         font-weight: $medium;
         color: $light-grey-text;
         line-height: 53px;
@@ -194,7 +204,7 @@ body {
     }
 
     &__img {
-        margin-top: 20px;
+        margin-top: $font-sm;
     }
 
     &__bg-box {
@@ -216,7 +226,7 @@ body {
     justify-content: start;
     align-items: center;
     color: $primary-grey;
-    font-size: 20px;
+    font-size: $font-sm;
     }
 
     &__icon {
@@ -257,7 +267,7 @@ body {
     }
 
     &__text {
-        font-size: 20px;
+        font-size: $font-sm;
         line-height: 28px;
     }
 
@@ -270,7 +280,7 @@ body {
     margin-top: 132px;
 
     &__heading {
-        font-size: 48px;
+        font-size: $font-lg;
         font-weight: $medium;
         color: $light-grey-text;  
     }
@@ -325,7 +335,7 @@ body {
         grid-column: 2/3;
         grid-row: 1/2;
         
-        font-size: 20px;
+        font-size: $font-sm;
         font-weight: $medium;
         
     }
@@ -333,7 +343,7 @@ body {
     &__text {
         grid-column: 2/3;
         grid-row: 2/-1;
-        font-size: 24px;
+        font-size: $font-md;
         font-weight: $semi-bold;
     }
 
