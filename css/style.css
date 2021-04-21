@@ -72,6 +72,7 @@ body {
 
 /*Hero group*/
 .hero-img {
+  display: block;
   border-radius: 2px;
   margin: 0 auto;
   max-width: 1110px; }
@@ -157,25 +158,26 @@ body {
     right: -165px;
     z-index: -10; }
 
-.list__item {
-  height: 82px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: #414862;
-  font-size: 1.3rem; }
-
-.list__icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 24px; }
-
-.list__strong {
-  font-weight: 700; }
+.list {
+  max-width: 540px;
+  margin-right: 1rem; }
+  .list__item {
+    height: 82px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #414862;
+    font-size: 1.3rem; }
+  .list__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 24px; }
+  .list__strong {
+    font-weight: 700; }
 
 /*Legal info*/
 .legal-info {
-  width: 100%;
+  max-width: 1100px;
   height: 456px;
   margin-top: 148px;
   background-color: #414862;
