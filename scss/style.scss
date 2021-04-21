@@ -1,3 +1,5 @@
+@import "./scss/breakpoints.scss";
+
 /*Variables*/
 $gutter: 30px;
 $grid: 65px;
@@ -12,10 +14,10 @@ $medium: 500;
 $semi-bold: 600;
 $bold: 700;
 
-$font-xs: 18px;
-$font-sm: 20px;
-$font-md: 24px;
-$font-lg: 48px;
+$font-xs: 1.1rem; // 18px
+$font-sm: 1.3rem; //20px
+$font-md: 1.5rem; //24px
+$font-lg: 3rem; //48px
 
 
 /*Reset*/
@@ -45,8 +47,7 @@ li {
 }
 /*Styles*/
 body {
-    font-family: 'Barlow', sans-serif;
-    
+    font-family: 'Barlow', sans-serif;  
 }
 
 .container {
@@ -108,6 +109,12 @@ body {
 /*Hero group*/
 .hero-img {
     border-radius: 2px;
+    margin: 0 auto;
+    max-width: 1110px;
+    
+    @include breakpoint-down(large){
+        width: 100vw;
+    }
 }
 
 .hero-group {
@@ -122,8 +129,8 @@ body {
     color: #fff;
 
     position: absolute;
-    top: 221px;
-    left: 661px;
+    top: 49%; //221px;
+    left: 59%; //661px;
 
 
     &__heading {
@@ -312,7 +319,7 @@ body {
 
 
 .tile {
-    width: 536px;
+    width: 33.5rem;// 536px;
     height: 110px;
     padding: 31px 24px;
     background-color: $light-grey-bg;
@@ -322,6 +329,9 @@ body {
     grid-template-columns: 74px 1fr;
     grid-template-rows: 1fr 1fr;
 
+    &--phone {
+        margin-right: 30px;
+    }
     &__icon {
         grid-row: 1/-1;
         display: block;
