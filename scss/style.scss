@@ -1,8 +1,9 @@
 @import "./scss/breakpoints.scss";
 
 /*Variables*/
-$gutter: 30px;
-$grid: 65px;
+$grid-gap: 30px;
+$grid-col: 65px;
+$grid-row: 190px;
 
 $primary-grey: rgb(65, 72, 98);
 $green: rgb(0, 184, 123);
@@ -25,6 +26,7 @@ html {
     box-sizing: border-box;
     font-size: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 *,*::after, *::before {
     box-sizing: inherit;
@@ -104,14 +106,19 @@ body {
 .scroll-icon {
     display: inline-block;
     margin-left: 155px;
+    
 }
 
 /*Hero group*/
+
+.grid-container {
+    width: 1440px;
+    margin: 0 auto;
+}
 .hero-img {
     display: block;
     border-radius: 2px;
-    margin: 0 auto;
-    max-width: 1110px;
+    grid-column: 1/span 12;
     
     @include breakpoint-down(large){
         width: 100vw;
@@ -119,7 +126,14 @@ body {
 }
 
 .hero-group {
-    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  $grid-row;
+    grid-gap: $grid-gap;
+    
+    
 }
 .info {
     width: 353px;
@@ -128,11 +142,13 @@ body {
     padding: 32px;
     background-color: $primary-grey;
     color: #fff;
+    grid-column: 8/ span 4;
+    grid-row: 2;
 
-    position: absolute;
-    top: 49%; //221px;
-    left: 59%; //661px;
-
+    @include breakpoint-down(medium){
+        grid-column: 7/ span 3;
+         
+    }
 
     &__heading {
         margin: 24px 0 12px;
@@ -148,7 +164,7 @@ body {
 
 /*Offer*/
 .offer {
-    margin-top: 186px;
+    margin-top: 81px;
 
     &__heading {
       font-size: $font-lg;
@@ -206,29 +222,42 @@ body {
 
     &__body {
        margin-top: 88px;
-       display: flex;
-       justify-content: space-between;
-       position: relative;
+       display: grid;
+       grid-gap: $grid-gap;
+       grid-template-columns: repeat(12, 1fr);
+       grid-template-rows: repeat(6, 1fr);
+
+       
+       
     }
 
     &__img {
-        margin-top: $font-sm;
+        grid-column: 8/ span 5;
+        grid-row: 2/ span 4;
+        margin-top: 20px;
+        
+        // &>img {
+        //     max-width: 100%;
+        //     height: auto;
+        // } zmniejsza obrazek ale bg box nie 
     }
 
     &__bg-box {
         width: 515px;
-        height: 429px;
+        max-height: 429px;
         background-color: $light-grey-bg;
-        position: absolute;
-        top: -39px;
-        right: -165px;
         z-index: -10;
+        grid-column: 9/ span 6 ;
+        grid-row: 1/ span 6;
+        margin-top: 52px;
+        
     }
 }
 
 .list {
     max-width: 540px;
-    margin-right: 1rem;
+    grid-column: 1/ span 6;
+    grid-row: 2/ span 4;
 
     &__item{
     height: 82px;

@@ -4,7 +4,8 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 *, *::after, *::before {
   box-sizing: inherit;
@@ -71,17 +72,25 @@ body {
   margin-left: 155px; }
 
 /*Hero group*/
+.grid-container {
+  width: 1440px;
+  margin: 0 auto; }
+
 .hero-img {
   display: block;
   border-radius: 2px;
-  margin: 0 auto;
-  max-width: 1110px; }
-  @media (max-width: 72.374em) {
+  grid-column: 1/span 12; }
+  @media (max-width: 1110px) {
     .hero-img {
       width: 100vw; } }
 
 .hero-group {
-  position: relative; }
+  max-width: 1110px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 190px;
+  grid-gap: 30px; }
 
 .info {
   width: 353px;
@@ -90,9 +99,11 @@ body {
   padding: 32px;
   background-color: #414862;
   color: #fff;
-  position: absolute;
-  top: 49%;
-  left: 59%; }
+  grid-column: 8/ span 4;
+  grid-row: 2; }
+  @media (max-width: 900px) {
+    .info {
+      grid-column: 7/ span 3; } }
   .info__heading {
     margin: 24px 0 12px;
     font-size: 1.5rem;
@@ -103,7 +114,7 @@ body {
 
 /*Offer*/
 .offer {
-  margin-top: 186px; }
+  margin-top: 81px; }
   .offer__heading {
     font-size: 3rem;
     font-weight: 500;
@@ -144,23 +155,27 @@ body {
       color: #414862; }
   .profits__body {
     margin-top: 88px;
-    display: flex;
-    justify-content: space-between;
-    position: relative; }
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr); }
   .profits__img {
-    margin-top: 1.3rem; }
+    grid-column: 8/ span 5;
+    grid-row: 2/ span 4;
+    margin-top: 20px; }
   .profits__bg-box {
     width: 515px;
-    height: 429px;
+    max-height: 429px;
     background-color: #f1f3f6;
-    position: absolute;
-    top: -39px;
-    right: -165px;
-    z-index: -10; }
+    z-index: -10;
+    grid-column: 9/ span 6;
+    grid-row: 1/ span 6;
+    margin-top: 52px; }
 
 .list {
   max-width: 540px;
-  margin-right: 1rem; }
+  grid-column: 1/ span 6;
+  grid-row: 2/ span 4; }
   .list__item {
     height: 82px;
     display: flex;
