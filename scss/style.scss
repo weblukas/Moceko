@@ -76,12 +76,20 @@ body {
         text-align: center;
         line-height: 52px;
 
+        @include breakpoint-down(xs){
+            display: none;
+        }
+
     }
 }
 
 .business-areas {
     margin-top: 129px;
     max-width: 346px;
+
+    @include breakpoint-down(xs){
+        max-width: 328px;
+    }
 
     &__item {
         font-size: 42px;
@@ -90,6 +98,10 @@ body {
 
         &--color {
             color: $green;
+
+            @include breakpoint-down(xs){
+                margin-right: 18px;
+            }   
         }
         &--summarizing {
             font-size: 32px;
@@ -98,6 +110,10 @@ body {
             margin: 54px 0 88px;
             display: flex;
             justify-content: space-between;
+
+            @include breakpoint-down(xs){
+                justify-content: start;
+            }
         }
     }
 
@@ -107,6 +123,9 @@ body {
     display: inline-block;
     margin-left: 155px;
     
+    @include breakpoint-down(xs){
+        display: none;
+    }
 }
 
 /*Hero group*/
@@ -119,8 +138,12 @@ body {
     display: block;
     border-radius: 2px;
     grid-column: 1/span 12;
+
+    @include breakpoint-down(xs){
+        grid-column: 1/span 4;
+    }
     
-    @include breakpoint-down(large){
+    @include breakpoint-down(lg){
         width: 100vw;
     }
 }
@@ -132,6 +155,11 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows:  $grid-row;
     grid-gap: $grid-gap;
+
+    @include breakpoint-down(xs){
+        display: flex;
+        flex-direction: column;
+    }
     
     
 }
@@ -145,9 +173,9 @@ body {
     grid-column: 8/ span 4;
     grid-row: 2;
 
-    @include breakpoint-down(medium){
-        grid-column: 7/ span 3;
-         
+    @include breakpoint-down(xs){
+       width: 100vw;
+       height: 336px;
     }
 
     &__heading {
@@ -182,6 +210,12 @@ body {
         margin: 94px auto;
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint-down(sm){
+            flex-direction: column;
+            align-items: center;
+            min-width: 327px;
+         }
     }
 }
 
@@ -192,6 +226,13 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
+   @include breakpoint-down(sm){
+    width: 100%;
+    height: 236px;
+    margin-bottom: 32px;
+    background-color: $light-grey-bg;
+   }
    
    &__icon {
        margin-bottom: 24px;
@@ -226,7 +267,11 @@ body {
        grid-gap: $grid-gap;
        grid-template-columns: repeat(12, 1fr);
        grid-template-rows: repeat(6, 1fr);
-
+        
+       @include breakpoint-down(xs) {
+           display: flex;
+           flex-direction: column;
+       }
        
        
     }
@@ -236,6 +281,9 @@ body {
         grid-row: 2/ span 4;
         margin-top: 20px;
         
+        @include breakpoint-down(xs) {
+           display: none; 
+        }
         // &>img {
         //     max-width: 100%;
         //     height: auto;
@@ -250,6 +298,10 @@ body {
         grid-column: 9/ span 6 ;
         grid-row: 1/ span 6;
         margin-top: 52px;
+
+        @include breakpoint-down(sm) {
+            display: none;
+        }
         
     }
 }
@@ -293,11 +345,18 @@ body {
     justify-content: center;
     text-align: center;
     padding-bottom: 75px;
+
+    @include breakpoint-down(xs) {
+        padding-top: 54px;
+        height: 608px;
+    }
+   
     
     &__heading {
         font-size: 32px;
         font-weight: $bold; 
 
+       
         &::after {
             content: '-';
             display: block;
@@ -334,6 +393,10 @@ body {
         display: flex;
         justify-content: space-between;
 
+        @include breakpoint-down(sm) {
+            flex-direction: column;
+        }
+
     }
 
     &__logo {
@@ -360,6 +423,11 @@ body {
     display: grid;
     grid-template-columns: 74px 1fr;
     grid-template-rows: 1fr 1fr;
+
+    @include breakpoint-down(sm){
+        width: 100%;
+        margin-bottom: 32px;
+       }
 
     &--phone {
         margin-right: 30px;
