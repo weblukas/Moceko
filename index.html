@@ -5,140 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;700&display=swap"
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap"
       rel="stylesheet"
-    />
+      /> 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Moceko</title>
   </head>
   <body>
     <!--Header------------------>
-    <header class="header">
-        <h1 class="header__heading"><img src="/assets/logo.svg" alt="Moceko" /></h1>
-        <a class="header__link" href="#kontakt">Kontakt</a>
-    </header>
+    <div class="container">
+      <header class="header center">
+          <h1 class="header__heading"><img src="assets/logo.svg" alt="Moceko" /></h1>
+          <a class="header__link" href="#kontakt">Kontakt</a>
+      </header>
     <!--Main-------------------->
     <main>
-        <h2>
+        <h2 class="center">
             <ul class="business-areas">
               <li class="business-areas__item">+ Dofinansowanie</li>
               <li class="business-areas__item">+ Wymiana pieca</li>
               <li class="business-areas__item">+ Docieplenie</li>
               <li class="business-areas__item business-areas__item--summarizing">
-                = Moceko
-              </li>
+                <span class="business-areas__item--color">=</span> Moceko
+                <img class="scroll-icon" src="assets/scroll.svg" > 
+               </li>
+            
             </ul>
-          </h2>
-          <div>
-            <span class="arrow-icon"></span>
+              
+              
+            
+        </h2>
+        <div class="hero-group">
+          <img class="hero-img" src="assets/hero-img.jpg" alt="solar panels image">
+          <div class="info">
+              <img class="info-icon" src="assets/info.svg">
+              <h4 class="info__heading">Informacja</h4>
+              <p class="info__text">Tylko do końca roku można używać <br> stare piece, kotły <br> i paleniska do celów ogrzewania!</p>
           </div>
-        <img src="/assets/hero-img.jpg" alt="solar panels image">
-        <div class="info">
-            <span class="info-icon"></span>
-            <h4 class="info__heading">Informacja</h4>
-            <p class="info__text">Tylko do końca roku można używać <br> stare piece, kotły <br> i paleniska do celów ogrzewania!</p>
         </div>
     <!--Offer------------------>
-        <div class="offer">
-            <h3 class="offer__heading">W czym Ci <br> <span>pomożemy?</span></h3>
+        <div class="offer center">
+            <h3 class="offer__heading">W czym Ci <br> <span class="offer__heading--strong">pomożemy?</span></h3>
             <div class="offer__body">
                <div class="card">
-                <span class="card__icon"></span>
+                <img class="card__icon" src="assets/dots.svg">
                 <p class="card__text">Ocenimy Twoją <br> sytuację oraz potrzeby</p>
                </div>
                <div class="card">
-                <span class="card__icon"></span>
+                <img class="card__icon" src="assets/mail.svg">
                 <p class="card__text">Dobierzemy <br> dofinansowanie</p>
                </div>
                <div class="card">
-                <span class="card__icon"></span>
+                <img class="card__icon" src="assets/star.svg">
                 <p class="card__text">Wybierzemy najlepszą ofertę <br> wymiany pieca iremontu</p>
                </div>   
             </div>
         </div>
     <!--Profits------------------>    
-        <div class="profits">
-            <h3 class="profits__heading">Co możesz <br> <span>zyskać?</span></h3>
+        <div class="profits center">
+            <h3 class="profits__heading">Co możesz <br> <span class="profits__heading--strong">zyskać?</span></h3>
             <div class="profits__body">
-                <ul class="profits__list">
-                    <li class="list__item item"><span class="item__icon"></span>Nawet <span class="strong">37 000 zł.</span> dotacji w ramach programu Czyste <br> Powietrze!</li>
-                    <li class="list__item item"><span class="item__icon"></span><span class="strong">Ekologiczne,</span> wygodne źródło ogrzewania!</li>
-                    <li class="list__item item"><span class="item__icon"></span><span class="strong">Docieplenie domu</span> i wymianę stolarki!</li>
-                    <li class="list__item item"><span class="item__icon"></span><span class="strong">Niskie</span> rachunki</li>  
+                <ul class="list">
+                    <li class="list__item">
+                      <img class="list__icon" src="assets/check.svg">
+                      <span>Nawet <span class="list__strong">37 000 zł.</span> dotacji w ramach programu Czyste Powietrze!</span>
+                    </li>
+                    
+                    <li class="list__item">
+                      <img class="list__icon" src="assets/check.svg">
+                      <span><span class="list__strong">Ekologiczne,</span> wygodne źródło ogrzewania!</span>
+                    </li>
+                    
+                    <li class="list__item">
+                      <img class="list__icon" src="assets/check.svg">
+                      <span><span class="list__strong">Docieplenie domu</span> i wymianę stolarki!</span>
+                    </li>
+                    
+                    <li class="list__item">
+                      <img class="list__icon" src="assets/check.svg">
+                      <span><span class="list__strong">Niskie</span> rachunki</span>
+                    </li>  
                 </ul>
                 <div class="profits__img">
-                    <img src="/assets/ground-flora.jpg">
-                    <div class="profits__grey-bg"></div>
+                    <img src="assets/ground-flora.jpg">
                 </div>
+                <div class="profits__bg-box"></div>
             </div>
         </div>
-    <!--Legal-info------------------>        
-        <div class="legal-info">
-            <h4 class="legal-info__heading">Zgodnie z uchwałą antysmogową*</h4>
-            <div class="legal-info__line"></div>
-            <p class="legal-info__text">z dniem 1 stycznia 2022 na terenie całego WOJEWÓDZTWA <br> PODKARPACKIEGO wprowadzony zostanie <span class="legal-info__strong">zakaz stosowania palenisk, </span><br> pieców i kotłów na paliwa stałe starszych niż 10 lat lub nieposiadających <br> tabliczek znamionowych. <br> *uchwała nr LII/869/18 SEJMIKU WOJEWÓDZTWA PODKARPACKIEGO <br> z dnia 23 kwietnia 2018
-            </p>
-          </div>
-          <div class="card">
-            <span class="card__icon"></span>
-            <p class="card__text">
-              Dobierzemy <br />
-              dofinansowanie
-            </p>
-          </div>
-          <div class="card">
-            <span class="card__icon"></span>
-            <p class="card__text">
-              Wybierzemy najlepszą ofertę <br />
-              wymiany pieca iremontu
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--Profits------------------>
-      <div class="profits">
-        <h3 class="profits__heading">
-          Co możesz <br />
-          <span>zyskać?</span>
-        </h3>
-        <div class="profits__body">
-          <ul class="profits__list">
-            <li class="list__item item">
-              <span class="item__icon"></span>Nawet
-              <span class="strong">37 000 zł.</span> dotacji w ramach programu
-              Czyste <br />
-              Powietrze!
-            </li>
-            <li class="list__item item">
-              <span class="item__icon"></span
-              ><span class="strong">Ekologiczne,</span> wygodne źródło
-              ogrzewania!
-            </li>
-            <li class="list__item item">
-              <span class="item__icon"></span
-              ><span class="strong">Docieplenie domu</span> i wymianę stolarki!
-            </li>
-            <li class="list__item item">
-              <span class="item__icon"></span
-              ><span class="strong">Niskie</span> rachunki
-            </li>
-          </ul>
-          <div class="profits__img">
-            <img src="/assets/ground-flora.jpg" />
-            <div class="profits__grey-bg"></div>
-          </div>
-        </div>
-      </div>
+         
       <!--Legal-info------------------>
-      <div class="legal-info">
+      <div class="legal-info center">
         <h4 class="legal-info__heading">Zgodnie z uchwałą antysmogową*</h4>
-        <div class="legal-info__line"></div>
+        
         <p class="legal-info__text">
           z dniem 1 stycznia 2022 na terenie całego WOJEWÓDZTWA <br />
           PODKARPACKIEGO wprowadzony zostanie
@@ -154,25 +118,31 @@
     </main>
     <!--Footer------------------>
     <footer class="footer">
-      <h3 id="kontakt" class="footer__heading">
-        Nie czekaj,<span class="footer__strong">skontaktuj się!</span>
-      </h3>
-      <div class="footer__card card">
-        <span class="card__icon phone"></span>
-        <div class="card__body">
-          <span class="card__title">zadzwoń</span>
-          <span class="card__phone-nr">530 357 608</span>
+      <div class="center">
+        <h3 id="kontakt" class="footer__heading">
+          Nie czekaj,<br> <span class="footer__strong">skontaktuj się!</span>
+        </h3>
+        <div class="footer__body">
+          <div class="tile tile--phone">
+            <img class="tile__icon" src="assets/phone.svg">
+              <span class="tile__title">zadzwoń</span>
+              <span class="tile__text">530 357 608</span>
+          </div>
+          <div class="tile">
+            <img class="tile__icon" src="assets/mail.svg">
+            <span class="tile__title">napisz</span>
+            <span class="tile__text">biuro@moceko.com</span> 
+          </div>
         </div>
       </div>
-      <div class="footer__card card">
-        <span class="card__icon mail"></span>
-        <div class="card__body">
-          <span class="card__title">napisz</span>
-          <span class="card__phone-nr">biuro@moceko.com</span>
-        </div>
-      </div>
+
+
+
+    </div>
       <div class="footer__logo">
-        <img src="/assets/logo.svg" alt="Moceko" />
+        <div class="center">
+        <img class="footer__img" src="assets/logo.svg" alt="Moceko" />
+        </div>
       </div>
     </footer>
   </body>

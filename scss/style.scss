@@ -1,3 +1,5 @@
+@import "./scss/breakpoints.scss";
+
 /*Variables*/
 $gutter: 30px;
 $grid: 65px;
@@ -7,10 +9,22 @@ $green: rgb(0, 184, 123);
 $light-grey-text:rgba(65, 72, 98, 0.749); 
 $light-grey-bg: rgb(241, 243, 246);
 
+/*Fonts*/
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+$font-xs: 1.1rem; // 18px
+$font-sm: 1.3rem; //20px
+$font-md: 1.5rem; //24px
+$font-lg: 3rem; //48px
+
+
 /*Reset*/
 html {
     box-sizing: border-box;
     font-size: 100%;
+    overflow-x: hidden;
 }
 *,*::after, *::before {
     box-sizing: inherit;
@@ -21,27 +35,330 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+/*utility clasess*/
+.center {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
 /*Styles*/
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', sans-serif;  
+}
+
+.container {
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    height: 91px;
+    padding-top: 39px;
+    margin: 0 auto;
+
+    &__heading {
+        margin-right: 13px;
+    }
     &__link {
         display: block;
         width: 118px;
         height: 52px;
         color: #fff;
         background-color: $green;
+        text-align: center;
+        line-height: 52px;
 
     }
 }
 
+.business-areas {
+    margin-top: 129px;
+    max-width: 346px;
+
+    &__item {
+        font-size: 42px;
+        font-weight: $bold;
+        color: $primary-grey;
+
+        &--color {
+            color: $green;
+        }
+        &--summarizing {
+            font-size: 32px;
+            font-weight: $medium;
+            color: $light-grey-text;
+            margin: 54px 0 88px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.scroll-icon {
+    display: inline-block;
+    margin-left: 155px;
+}
+
+/*Hero group*/
+.hero-img {
+    display: block;
+    border-radius: 2px;
+    margin: 0 auto;
+    max-width: 1110px;
+    
+    @include breakpoint-down(large){
+        width: 100vw;
+    }
+}
+
+.hero-group {
+    position: relative;
+}
+.info {
+    width: 353px;
+    height: 262px;
+    border-radius: 4px;
+    padding: 32px;
+    background-color: $primary-grey;
+    color: #fff;
+
+    position: absolute;
+    top: 49%; //221px;
+    left: 59%; //661px;
 
 
+    &__heading {
+        margin: 24px 0 12px;
+        font-size: $font-md;
+        font-weight: $bold;
+    }
 
+    &__text {
+        font-size: $font-xs;
+        font-weight: $medium; 
+    }
+}
+
+/*Offer*/
+.offer {
+    margin-top: 186px;
+
+    &__heading {
+      font-size: $font-lg;
+      font-weight: $medium;
+      color: $light-grey-text;
+      line-height: 53px;
+      
+      &--strong {
+          font-weight: $bold;
+          color: $primary-grey;
+      }
+    }
+
+    &__body {
+        margin: 94px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card {
+   width: 346px;
+   height: 236px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+   &__icon {
+       margin-bottom: 24px;
+   }
+
+   &__text {
+       text-align: center;
+       font-size: $font-sm;
+       color: $primary-grey;
+   }
+}
+
+/*Profits*/
+.profits {
+    margin-top: 106px;
+    
+    &__heading {
+        font-size: $font-lg;
+        font-weight: $medium;
+        color: $light-grey-text;
+        line-height: 53px;
+        
+        &--strong {
+            font-weight: $bold;
+            color: $primary-grey;
+        } 
+    }
+
+    &__body {
+       margin-top: 88px;
+       display: flex;
+       justify-content: space-between;
+       position: relative;
+    }
+
+    &__img {
+        margin-top: $font-sm;
+    }
+
+    &__bg-box {
+        width: 515px;
+        height: 429px;
+        background-color: $light-grey-bg;
+        position: absolute;
+        top: -39px;
+        right: -165px;
+        z-index: -10;
+    }
+}
+
+.list {
+    max-width: 540px;
+    margin-right: 1rem;
+
+    &__item{
+    height: 82px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: $primary-grey;
+    font-size: $font-sm;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 24px;
+    }
+
+    &__strong {
+       font-weight: $bold; 
+    }
+}
+
+
+/*Legal info*/
+.legal-info {
+    max-width: 1100px;
+    height: 456px;
+    margin-top: 148px;
+    background-color: $primary-grey;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 75px;
+    
+    &__heading {
+        font-size: 32px;
+        font-weight: $bold; 
+
+        &::after {
+            content: '-';
+            display: block;
+            color: $green;
+        } 
+    }
+
+    &__text {
+        font-size: $font-sm;
+        line-height: 28px;
+    }
+
+    &__strong {
+        color: $green;
+    }  
+}
+
+.footer {
+    margin-top: 132px;
+
+    &__heading {
+        font-size: $font-lg;
+        font-weight: $medium;
+        color: $light-grey-text;  
+    }
+
+    &__strong {
+        font-weight: $bold;
+        color: $primary-grey;
+    }
+
+    &__body {
+        margin-top: 88px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__logo {
+        margin-top: 167px;
+        width: 100vw;
+        height: 153px;
+        background-color: $light-grey-bg;
+    }
+
+    &__img {
+        display: block;
+        padding-top: 50px;
+    }
+}
+
+
+.tile {
+    width: 33.5rem;// 536px;
+    height: 110px;
+    padding: 31px 24px;
+    background-color: $light-grey-bg;
+    color: $primary-grey;
+
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &--phone {
+        margin-right: 30px;
+    }
+    &__icon {
+        grid-row: 1/-1;
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: auto 0;
+        
+    }
+
+    &__title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        
+        font-size: $font-sm;
+        font-weight: $medium;
+        
+    }
+
+    &__text {
+        grid-column: 2/3;
+        grid-row: 2/-1;
+        font-size: $font-md;
+        font-weight: $semi-bold;
+    }
+
+}
 
