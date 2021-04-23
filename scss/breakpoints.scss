@@ -12,6 +12,7 @@ $breakpoints-up: (
         "lg": "1110px" 
     );
 
+
 @mixin breakpoint-down($size) {
     @media (max-width: map-get($breakpoints-down, $size)){
         @content;
