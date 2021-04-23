@@ -1,8 +1,9 @@
 @import "./scss/breakpoints.scss";
 
 /*Variables*/
-$gutter: 30px;
-$grid: 65px;
+$grid-gap: 30px;
+$grid-col: 65px;
+$grid-row: 190px;
 
 $primary-grey: rgb(65, 72, 98);
 $green: rgb(0, 184, 123);
@@ -25,6 +26,7 @@ html {
     box-sizing: border-box;
     font-size: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 *,*::after, *::before {
     box-sizing: inherit;
@@ -74,12 +76,20 @@ body {
         text-align: center;
         line-height: 52px;
 
+        @include breakpoint-down(xs){
+            display: none;
+        }
+
     }
 }
 
 .business-areas {
     margin-top: 129px;
     max-width: 346px;
+
+    @include breakpoint-down(xs){
+        max-width: 328px;
+    }
 
     &__item {
         font-size: 42px;
@@ -88,6 +98,10 @@ body {
 
         &--color {
             color: $green;
+
+            @include breakpoint-down(xs){
+                margin-right: 18px;
+            }   
         }
         &--summarizing {
             font-size: 32px;
@@ -96,6 +110,10 @@ body {
             margin: 54px 0 88px;
             display: flex;
             justify-content: space-between;
+
+            @include breakpoint-down(xs){
+                justify-content: start;
+            }
         }
     }
 
@@ -104,35 +122,92 @@ body {
 .scroll-icon {
     display: inline-block;
     margin-left: 155px;
+    
+    @include breakpoint-down(xs){
+        display: none;
+    }
 }
 
 /*Hero group*/
-.hero-img {
+
+.grid-container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.hero-img-wrap {
     display: block;
     border-radius: 2px;
-    margin: 0 auto;
-    max-width: 1110px;
+    grid-column: 1/span 12;
+    grid-row: 1;
+
+    .hero-img {
+        width: 100%;
+        @include breakpoint-down(sm){
+            width: auto;
+            max-height: 391px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
     
-    @include breakpoint-down(large){
+
+    @include breakpoint-down(sm){
+        grid-column: 1/span 4;
+        border-radius: 0;
+    }
+    
+    @include breakpoint-down(lg){
         width: 100vw;
     }
 }
 
 .hero-group {
-    position: relative;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:  1fr;
+    column-gap: $grid-gap;
+
+    @include breakpoint-down(xs){
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
 }
 .info {
-    width: 353px;
-    height: 262px;
+    // width: 353px;
+    // height: 262px;
     border-radius: 4px;
     padding: 32px;
     background-color: $primary-grey;
     color: #fff;
+    grid-column: 8/ span 4;
+    grid-row: 1;
+    position: relative;
+    bottom: -50%;
+    height: min-content;
 
-    position: absolute;
-    top: 49%; //221px;
-    left: 59%; //661px;
+    
+    @include breakpoint-down(md){
+        grid-column: 7 / span 6;
 
+     }
+
+    @include breakpoint-down(sm){
+      grid-column: 1 / span 12;
+      border-radius: 0;
+
+      grid-row: 2;
+       width: 100vw;
+    //    height: 336px;
+       bottom: auto;
+
+    }
 
     &__heading {
         margin: 24px 0 12px;
@@ -148,7 +223,7 @@ body {
 
 /*Offer*/
 .offer {
-    margin-top: 186px;
+    margin-top: 81px;
 
     &__heading {
       font-size: $font-lg;
@@ -166,6 +241,12 @@ body {
         margin: 94px auto;
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint-down(sm){
+            flex-direction: column;
+            align-items: center;
+            min-width: 327px;
+         }
     }
 }
 
@@ -176,6 +257,13 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
+   @include breakpoint-down(sm){
+    width: 100%;
+    height: 236px;
+    margin-bottom: 32px;
+    background-color: $light-grey-bg;
+   }
    
    &__icon {
        margin-bottom: 24px;
@@ -206,55 +294,100 @@ body {
 
     &__body {
        margin-top: 88px;
-       display: flex;
-       justify-content: space-between;
-       position: relative;
+       display: grid;
+       grid-gap: $grid-gap;
+       grid-template-columns: repeat(12, 1fr);
+       grid-template-rows: repeat(6, 1fr);
+       
+        
+       @include breakpoint-down(xs) {
+           display: flex;
+           flex-direction: column;
+       }
+       
+       
     }
 
     &__img {
-        margin-top: $font-sm;
+        grid-column: 8/ span 5;
+        grid-row: 2/ span 4;
+        margin-top: 20px;
+
+        @include breakpoint-down(lg) {
+            grid-column: 9/ span 4;
+        }
+        
+        @include breakpoint-down(md) {
+           display: none; 
+        }
+        // &>img {
+        //     max-width: 100%;
+        //     height: auto;
+        // } zmniejsza obrazek ale bg box nie 
     }
 
     &__bg-box {
         width: 515px;
-        height: 429px;
+        max-height: 429px;
         background-color: $light-grey-bg;
-        position: absolute;
-        top: -39px;
-        right: -165px;
         z-index: -10;
+        grid-column: 9/ span 6 ;
+        grid-row: 1/ span 6;
+        margin-top: 52px;
+
+        @include breakpoint-down(lg) {
+            // grid-column: 9/ span 4;
+            grid-column: 10/ span 3 ;
+
+        }
+
+        @include breakpoint-down(md) {
+            display: none;
+        }
+        
+    }
+
+    .list {
+        // max-width: 540px;
+        grid-column: 1/ span 6;
+        grid-row: 2/ span 4;
+
+        @include breakpoint-down(lg) {
+            grid-column: 1/ span 7;
+        }
+
+        @include breakpoint-down(md) {
+            grid-column: 2/ span 12;
+         }
+    
+        &__item{
+        height: 82px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: $primary-grey;
+        font-size: $font-sm;
+        }
+    
+        &__icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 24px;
+        }
+    
+        &__strong {
+           font-weight: $bold; 
+        }
     }
 }
 
-.list {
-    max-width: 540px;
-    margin-right: 1rem;
 
-    &__item{
-    height: 82px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: $primary-grey;
-    font-size: $font-sm;
-    }
-
-    &__icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 24px;
-    }
-
-    &__strong {
-       font-weight: $bold; 
-    }
-}
 
 
 /*Legal info*/
 .legal-info {
     max-width: 1100px;
-    height: 456px;
+    // height: 456px;
     margin-top: 148px;
     background-color: $primary-grey;
     color: #fff;
@@ -263,12 +396,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 75px;
-    
+    padding: 4.5rem 2rem 4.7rem; //75px;
+
     &__heading {
         font-size: 32px;
         font-weight: $bold; 
 
+       
         &::after {
             content: '-';
             display: block;
@@ -279,6 +413,12 @@ body {
     &__text {
         font-size: $font-sm;
         line-height: 28px;
+        @include breakpoint-down(sm) {
+            // text-align: justify;
+            br {
+                display: none;
+            }
+        }
     }
 
     &__strong {
@@ -304,6 +444,10 @@ body {
         margin-top: 88px;
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint-down(sm) {
+            flex-direction: column;
+        }
 
     }
 
@@ -331,6 +475,11 @@ body {
     display: grid;
     grid-template-columns: 74px 1fr;
     grid-template-rows: 1fr 1fr;
+
+    @include breakpoint-down(sm){
+        width: 100%;
+        margin-bottom: 32px;
+       }
 
     &--phone {
         margin-right: 30px;
