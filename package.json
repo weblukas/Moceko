@@ -4,7 +4,7 @@
   "description": "```bash\r npm init\r ```",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass scss/style.scss css/style.css -w"
+    "scss": "sass scss/style.scss css/style2.css -w"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/weblukas/Moceko-landing-page/issues"
   },
   "homepage": "https://github.com/weblukas/Moceko-landing-page#readme",
-  "devDependencies": {
-    "node-sass": "^5.0.0"
+  "dependencies": {
+    "sass": "^1.32.12"
   }
 }
